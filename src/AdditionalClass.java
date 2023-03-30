@@ -27,36 +27,25 @@ public class AdditionalClass {
     }
 
     public void getMinSalary() {
-        Employee employee = employees[0];
-        double minSalary = employee.getSalary();
+        Employee minEmployee = employees[0];
         for (int i = 1; i < employees.length; i++) {
-            employee = employees[i];
-            if (employee.getSalary() < minSalary) {
-                minSalary = employee.getSalary();
+            if (employees[i].getSalary() < minEmployee.getSalary()) {
+                minEmployee = employees[i];
             }
         }
-        for (Employee anyEmployee : employees) {
-            if (anyEmployee.getSalary() == minSalary) {
-                System.out.println("Сотрудник с минимальной зарплатой: " + anyEmployee);
+                System.out.println("Сотрудник с минимальной зарплатой: " + minEmployee);
             }
-        }
-    }
+
 
     public void getMaxSalary() {
-        Employee employee = employees[0];
-        double maxSalary = employee.getSalary();
+        Employee maxEmployee = employees[0];
         for (int i = 1; i < employees.length; i++) {
-            employee = employees[i];
-            if (employee.getSalary() > maxSalary) {
-                maxSalary = employee.getSalary();
+            if (employees[i].getSalary() > maxEmployee.getSalary()) {
+                maxEmployee = employees[i];
             }
         }
-        for (Employee anyEmployee : employees) {
-            if (anyEmployee.getSalary() == maxSalary) {
-                System.out.println("Сотрудник с максимальной зарплатой: " + anyEmployee);
+                System.out.println("Сотрудник с максимальной зарплатой: " + maxEmployee);
             }
-        }
-    }
 
     public void getAverageSalary() {
         double sum = 0;
